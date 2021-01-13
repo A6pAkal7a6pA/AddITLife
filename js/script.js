@@ -1,42 +1,45 @@
-$('.slider__item').on('click', function() {
+$('.slider__item').on('click', function () {
   $(this).addClass('active').siblings().removeClass('active');
 });
 
-$('.slider-dots__item-1').on('click', function() {
+$('.header__burger').click(function (event) {
+  $('.header__burger,.header__menu').toggleClass('active');
+});
+
+$('.slider-dots__item-1').on('click', function () {
   $('.slider__body').addClass('active-1');
   $('.slider__body').removeClass('active-2');
   $('.slider__body').removeClass('active-3');
   $('.slider__item-1').addClass('active').siblings().removeClass('active');
 });
-$('.slider-dots__item-2').on('click', function() {
+$('.slider-dots__item-2').on('click', function () {
   $('.slider__body').addClass('active-2');
   $('.slider__body').removeClass('active-1');
   $('.slider__body').removeClass('active-3');
   $('.slider__item-2').addClass('active').siblings().removeClass('active');
 });
-$('.slider-dots__item-3').on('click', function() {
+$('.slider-dots__item-3').on('click', function () {
   $('.slider__body').addClass('active-3');
   $('.slider__body').removeClass('active-1');
   $('.slider__body').removeClass('active-2');
   $('.slider__item-3').addClass('active').siblings().removeClass('active');
 });
 
-$('.slider__item-1').on('click', function() {
+$('.slider__item-1').on('click', function () {
   $('.slider__body').addClass('active-1');
   $('.slider__body').removeClass('active-2');
   $('.slider__body').removeClass('active-3');
 });
-$('.slider__item-2').on('click', function() {
+$('.slider__item-2').on('click', function () {
   $('.slider__body').addClass('active-2');
   $('.slider__body').removeClass('active-1');
   $('.slider__body').removeClass('active-3');
 });
-$('.slider__item-3').on('click', function() {
+$('.slider__item-3').on('click', function () {
   $('.slider__body').addClass('active-3');
   $('.slider__body').removeClass('active-1');
   $('.slider__body').removeClass('active-2');
 });
-
 
 
 
@@ -45,24 +48,29 @@ let select = function () {
   let selectItem = document.querySelectorAll('.menu-select__item');
 
   selectHeader.forEach(item => {
-      item.addEventListener('click', selectToggle)
+    item.addEventListener('click', selectToggle)
   });
 
   selectItem.forEach(item => {
-      item.addEventListener('click', selectChoose)
+    item.addEventListener('click', selectChoose)
   });
 
+  // selectImg.forEach(item => {
+  //   item.addEventListener('click', selectChoose)
+  // });
+
   function selectToggle() {
-      this.parentElement.classList.toggle('is-active');
+    this.parentElement.classList.toggle('is-active');
   }
 
   function selectChoose() {
-      let text = this.innerText,
-          select = this.closest('.menu-select'),
-          currentText = select.querySelector('.menu-select__current');
-      currentText.innerText = text;
-      select.classList.remove('is-active');
+    let img = this.querySelector('img').outerHTML;
+    let text = this.innerHTML,
+      select = this.closest('.menu-select'),
+      currentText = select.querySelector('.menu-select__current');
+    currentText.innerHTML = img;
 
+    select.classList.remove('is-active');
   }
 
 };
