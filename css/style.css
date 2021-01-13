@@ -192,6 +192,7 @@ a {
   top: 8px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  z-index: 51;
 }
 
 .header__burger::before, .header__burger::after {
@@ -550,6 +551,53 @@ a {
   .header__burger {
     display: block;
     margin-left: 50px;
+    z-index: 10;
+  }
+  .header__menu.active {
+    position: relative;
+  }
+  .header__menu .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #151515;
+    z-index: 8;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slider-dots {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 40px;
+    left: 0;
+    z-index: 3;
+  }
+  .header__menu .menu__list-item {
+    padding: 10px 0;
+  }
+  .header__menu.active .menu__list {
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
   .slider__body.active-2 .header__burger::after,
   .slider__body.active-2 .header__burger::before,
