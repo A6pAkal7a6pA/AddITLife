@@ -233,16 +233,11 @@ a {
   background-color: #000;
 }
 
-
 .header.projects .header__burger.active::after,
 .header.projects .header__burger.active::before,
 .header.projects .header__burger.active span {
   background-color: #fff;
 }
-
-
-
-
 
 .menu {
   width: 100%;
@@ -1003,10 +998,10 @@ a {
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
 }
 .header.projects .menu .menu__list-link {
-  color: #000!important;
+  color: #000 !important;
 }
-.header.projects .header__menu.active .menu__list-link{
-  color: #fff!important;
+.header.projects .header__menu.active .menu__list-link {
+  color: #fff !important;
 }
 
 .header.projects .menu-select__current:before {
@@ -1321,6 +1316,30 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .slick-dots {
+    display: none;
+  }
+  .slider-laptop__item {
+    max-width: 545px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .laptop {
+    padding: 50px 0;
+  }
+  .slider-laptop {
+    width: 100%;
+}
+
+  .slider-laptop__item {
+    margin: 0 20px;
+    max-width: 320px;
+  }
+}
+
 .train-info {
   width: 100%;
   height: 100%;
@@ -1609,6 +1628,7 @@ a {
     box-sizing: border-box;
     border-radius: 5px;
     margin-bottom: 25px;
+    padding: 5px;
   }
 
   &__text {

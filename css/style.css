@@ -1423,6 +1423,29 @@ a {
   }
 }
 
+@media (max-width: 767px) {
+  .slick-dots {
+    display: none;
+  }
+  .slider-laptop__item {
+    max-width: 545px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .laptop {
+    padding: 50px 0;
+  }
+  .slider-laptop {
+    width: 100%;
+  }
+  .slider-laptop__item {
+    margin: 0 20px;
+    max-width: 320px;
+  }
+}
+
 .train-info {
   width: 100%;
   height: 100%;
@@ -1762,6 +1785,7 @@ a {
           box-sizing: border-box;
   border-radius: 5px;
   margin-bottom: 25px;
+  padding: 5px;
 }
 
 .form-commun__text {
