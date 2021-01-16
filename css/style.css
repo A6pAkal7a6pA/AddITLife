@@ -824,6 +824,10 @@ img.anim__item._active {
 
 .slider-about__text {
   max-width: 680px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
 }
 
 .div-img-1.anim__item {
@@ -857,7 +861,7 @@ img.anim__item._active {
 }
 
 .div-img-1.anim__item._active {
-  color: #E00808;
+  color: #e00808;
 }
 
 .div-img-1.anim__item._active::before,
@@ -867,15 +871,15 @@ img.anim__item._active {
 }
 
 .div-img-1.anim__item._active::before {
-  border-top-color: #E00808;
-  border-right-color: #E00808;
+  border-top-color: #e00808;
+  border-right-color: #e00808;
   -webkit-transition: width 0.25s ease-out, height 0.5s ease-out 0.5s;
   transition: width 0.25s ease-out, height 0.5s ease-out 0.5s;
 }
 
 .div-img-1.anim__item._active::after {
-  border-bottom-color: #E00808;
-  border-left-color: #E00808;
+  border-bottom-color: #e00808;
+  border-left-color: #e00808;
   -webkit-transition: border-color 0s ease-out 1s, width 0.5s ease-out 1s, height 0.5s ease-out 1.5s;
   transition: border-color 0s ease-out 1s, width 0.5s ease-out 1s, height 0.5s ease-out 1.5s;
 }
@@ -911,7 +915,7 @@ img.anim__item._active {
 }
 
 .div-img-2.anim__item._active {
-  color: #D3D3D3;
+  color: #d3d3d3;
 }
 
 .div-img-2.anim__item._active::before,
@@ -921,15 +925,15 @@ img.anim__item._active {
 }
 
 .div-img-2.anim__item._active::before {
-  border-top-color: #D3D3D3;
-  border-right-color: #D3D3D3;
+  border-top-color: #d3d3d3;
+  border-right-color: #d3d3d3;
   -webkit-transition: border-color 0s ease-out 1s, width 0.5s ease-out 1s, height 0.5s ease-out 1.5s;
   transition: border-color 0s ease-out 1s, width 0.5s ease-out 1s, height 0.5s ease-out 1.5s;
 }
 
 .div-img-2.anim__item._active::after {
-  border-bottom-color: #D3D3D3;
-  border-left-color: #D3D3D3;
+  border-bottom-color: #d3d3d3;
+  border-left-color: #d3d3d3;
   -webkit-transition: width 0.5s ease-out, height 0.5s ease-out 0.5s;
   transition: width 0.5s ease-out, height 0.5s ease-out 0.5s;
 }
@@ -2295,5 +2299,12 @@ img.anim__item._active {
   }
   .header {
     height: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .div-img-1 img {
+    width: 80%;
+    margin: 0 auto;
   }
 }
