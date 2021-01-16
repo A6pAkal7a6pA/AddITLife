@@ -880,8 +880,6 @@ img.anim__item._active {
     height 0.5s ease-out 0.5s; // And finally height
 }
 
-
-
 .btn {
   position: absolute;
   top: 50%;
@@ -1222,7 +1220,9 @@ img.anim__item._active {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
+
 
   &__item span {
     font-size: 30px;
@@ -1243,6 +1243,45 @@ img.anim__item._active {
     z-index: 1;
     object-fit: cover;
   }
+}
+
+.div-hover {
+  background: linear-gradient(155.22deg, #ff0000 -25.32%, #ff9900 145.46%);
+  opacity: 0.9;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  padding: 25px 20px;
+  display: none;
+  & hr {
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 15px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #ffffff;
+  }
+}
+
+.our-proj__item.hover .div-hover {
+  display: block;
 }
 
 .proj-arrow {
