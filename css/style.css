@@ -170,7 +170,6 @@ a {
 }
 
 .header__logo .header__logo-img {
-  position: absolute;
   width: 170px;
   top: 10px;
 }
@@ -381,6 +380,14 @@ a {
 
 .slider__body.active-2 .header__logo-dark {
   display: none;
+}
+
+.slider__body.active-1 .header__logo-dark {
+  display: block;
+}
+
+.slider__body.active-3 .header__logo-dark {
+  display: block;
 }
 
 .slider__body.active-2 .header {

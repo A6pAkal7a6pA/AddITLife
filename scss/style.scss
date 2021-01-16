@@ -147,7 +147,6 @@ a {
   }
 
   &__logo &__logo-img {
-    position: absolute;
     width: 170px;
     top: 10px;
     // width: 100%;
@@ -351,6 +350,13 @@ a {
 }
 .slider__body.active-2 .header__logo-dark {
   display: none;
+}
+
+.slider__body.active-1 .header__logo-dark {
+  display: block;
+}
+.slider__body.active-3 .header__logo-dark {
+  display: block;
 }
 
 .slider__body.active-2 .header {
@@ -869,6 +875,8 @@ img.anim__item._active {
     // And then exanding width
     height 0.5s ease-out 0.5s; // And finally height
 }
+
+
 
 .btn {
   position: absolute;
