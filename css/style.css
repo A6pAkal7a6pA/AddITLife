@@ -263,8 +263,13 @@ a {
   margin-right: 20px;
 }
 
-.menu__list-item {
-  padding: 0 15px;
+.menu__list-item a {
+  padding: 0 15px 7px 15px;
+  border-bottom: 1px solid transparent;
+}
+
+.menu__list-item a:hover {
+  border-bottom: 1px solid #fff;
 }
 
 .menu__list-link {
@@ -349,6 +354,10 @@ a {
 
 .slider__body.active-2 .menu-select__current {
   color: #000;
+}
+
+.slider__body.active-2 .menu__list-item a:hover {
+  border-bottom: 1px solid #000;
 }
 
 .slider__body.active-2 .menu__list-link {
@@ -1099,6 +1108,10 @@ a {
 
 .header.projects .menu .menu__list-link {
   color: #000 !important;
+}
+
+.header.projects .menu__list-item a:hover {
+  border-bottom: 1px solid #000;
 }
 
 .header.projects .header__menu.active .menu__list-link {
