@@ -46,7 +46,7 @@ $('.slider__item-3').on('click', function () {
 let select = function () {
   let selectHeader = document.querySelectorAll('.menu-select__header');
   let selectItem = document.querySelectorAll('.menu-select__item');
-
+  let menuBtn = $('.menu-select');
   selectHeader.forEach(item => {
     item.addEventListener('click', selectToggle)
   });
@@ -72,10 +72,17 @@ let select = function () {
 
     select.classList.remove('is-active');
   }
+  $(document).click(function (e) {
+    if (!menuBtn.is(e.target) && menuBtn.has(e.target).length === 0) {
+        menuBtn.removeClass('is-active');
+    };
+});
 
 };
 
 select();
+
+
 
 $('.slider-about__body').slick({
   // appendArrows: $('.slider-about'),

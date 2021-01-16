@@ -278,6 +278,7 @@ a {
   &__current {
     display: flex;
     position: relative;
+    cursor: pointer;
   }
   &__current.fas.fa-chevron-down::before {
     position: absolute;
@@ -305,11 +306,13 @@ a {
   &__item img {
     max-width: 24px;
     margin-right: 10px;
+    cursor: pointer;
   }
 
-  &__item span {
+  &__item a {
     font-size: 12px;
     line-height: 14px;
+    cursor: pointer;
   }
 }
 
@@ -410,6 +413,7 @@ a {
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 15px;
+    cursor: pointer;
   }
 
   &__item span {
@@ -1072,6 +1076,7 @@ a {
 
 // ============ training ===============
 .training {
+  padding-top: 30px;
   width: 100%;
   height: 100%;
   &__body {
