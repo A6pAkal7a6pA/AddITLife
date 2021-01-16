@@ -2107,4 +2107,27 @@ img.anim__item._active {
   }
 }
 
+@media (max-width: 1500px) {
+  .header__logo .header__logo-img {
+    width: 110px;
+    position: unset;
+  }
+  .menu__list-link {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1355px) {
+  .header__logo .header__logo-img {
+    width: 69px;
+    
+  }
+  .menu__list-link {
+    font-size: 12px;
+  }
+  .header {
+    height: 50px;
+  }
+}
+
 // ============ partner ===============
