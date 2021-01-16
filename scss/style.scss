@@ -301,7 +301,7 @@ a {
     display: none;
     background: #ffffff;
     position: absolute;
-    top: 50px;
+    top: 70px;
     right: -15px;
     width: 125px;
     height: 72px;
@@ -311,6 +311,10 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  &__item:hover {
+    background-color: #ccc;
   }
   &__item img {
     max-width: 24px;
