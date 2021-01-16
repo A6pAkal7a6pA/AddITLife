@@ -758,7 +758,7 @@ img.anim__item {
   visibility: hidden;
 }
 
-img.anim__item._active {
+.slick-active img.anim__item._active {
   opacity: 1;
   -webkit-transition: 5s opacity, 5s visibility;
   transition: 5s opacity, 5s visibility;
@@ -773,15 +773,15 @@ img.anim__item._active {
 }
 
 .train-info__block-text.anim__item._active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .services__item.anim__item {
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  -webkit-transform: translateX(-1000%);
+          transform: translateX(-1000%);
 }
 
 .services__item.anim__item._active {
@@ -1644,7 +1644,7 @@ img.anim__item._active {
   height: 4px;
 }
 
-.slider-laptop__dots .slick-active button {
+.slider-laptop__dots .slick-active.anim__item button {
   background-color: #0b0a1e;
 }
 
@@ -2346,10 +2346,13 @@ img.anim__item._active {
     width: 69px;
   }
   .menu__list-link {
-    font-size: 12px;
+    font-size: 11px;
   }
   .header {
     height: 50px;
+  }
+  .menu__list-item a {
+    padding: 0 5px 7px 5px;
   }
 }
 

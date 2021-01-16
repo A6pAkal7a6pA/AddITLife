@@ -164,7 +164,6 @@ if (animItems.length > 0) {
       if (animItemsHeight > window.innerHeight) {
         animItemPoint = window.innerHeight - animItemsHeight / animStart
       }
-      console.log(animItemPoint);
       if ((pageYOffset > animItemsOffset - animItemPoint) && pageYOffset < (animItemsOffset + animItemsHeight)) {
         animItem.classList.add('_active');
       } else {
@@ -179,15 +178,21 @@ if (animItems.length > 0) {
       scrollTop = window.pageXOffset || document.documentElement.scrollTop;
     return {
       top: rect.top + scrollTop, left: rect.left + scrollLeft
+      
     }
   }
 }
 
-$( ".our-proj__item" ).hover(
+$(".our-proj__item").hover(
 
-  function() {
-    $( this ).addClass( "hover" );
-  }, function() {
-    $( this ).removeClass( "hover" );
+  function () {
+    $(this).addClass("hover");
+  }, function () {
+    $(this).removeClass("hover");
   }
 );
+$(document).ready(function () {
+  $(".tel__mask").mask("+3 (999) 99-99-999");
+});
+
+

@@ -692,8 +692,7 @@ img.anim__item {
   opacity: 0;
   visibility: hidden;
 }
-
-img.anim__item._active {
+.slick-active img.anim__item._active {
   opacity: 1;
   transition: 5s opacity, 5s visibility;
   visibility: visible;
@@ -705,12 +704,12 @@ img.anim__item._active {
 }
 
 .train-info__block-text.anim__item._active {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 .services__item.anim__item {
-  transition: all 0.8s ease 0s;
-  transform: translateY(100%);
+  transition: all 0.5s ease 0s;
+  transform: translateX(-1000%);
 }
 
 .services__item.anim__item._active {
@@ -879,6 +878,9 @@ img.anim__item._active {
     // And then exanding width
     height 0.5s ease-out 0.5s; // And finally height
 }
+
+
+
 
 .btn {
   position: absolute;
@@ -1167,6 +1169,10 @@ img.anim__item._active {
   .serv-list {
     column-count: auto;
   }
+}
+
+@media (max-width: 1030px) {
+
 }
 
 // ============ projects ===============
@@ -1524,7 +1530,7 @@ img.anim__item._active {
   height: 4px;
 }
 
-.slider-laptop__dots .slick-active button {
+.slider-laptop__dots .slick-active.anim__item button {
   background-color: #0b0a1e;
 }
 
@@ -2173,11 +2179,16 @@ img.anim__item._active {
     width: 69px;
   }
   .menu__list-link {
-    font-size: 12px;
+    font-size: 11px;
   }
   .header {
     height: 50px;
   }
+
+  .menu__list-item a {
+    padding: 0 5px 7px 5px;
+  }
+  
 }
 
 @media (max-width: 500px) {
