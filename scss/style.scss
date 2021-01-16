@@ -128,7 +128,7 @@ a {
 }
 
 .header {
-  height: 50px;
+  height: 120px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -143,10 +143,14 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   &__logo &__logo-img {
-    max-width: 70px;
+    position: absolute;
+    width: 170px;
+    top: 10px;
+    // width: 100%;
   }
 
   &__logo &__logo-light {
@@ -250,10 +254,10 @@ a {
     justify-content: space-between;
     margin-right: 20px;
   }
-  &__list-item{
+  &__list-item {
   }
 
-  &__list-item a{
+  &__list-item a {
     padding: 0 15px 7px 15px;
     border-bottom: 1px solid transparent;
   }
@@ -263,7 +267,7 @@ a {
 
   &__list-link {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 15px;
     color: #ffffff;
   }
@@ -329,9 +333,8 @@ a {
 .slider__body.active-2 .menu-select__current {
   color: #000;
 }
-.slider__body.active-2 .menu__list-item a:hover{
-    border-bottom: 1px solid #000;
-
+.slider__body.active-2 .menu__list-item a:hover {
+  border-bottom: 1px solid #000;
 }
 .slider__body.active-2 .menu__list-link {
   color: #000000;
@@ -666,6 +669,46 @@ a {
   }
 }
 
+hr.anim__item {
+  transform: translate(-1000%);
+  transition: all 0.8s ease 0s;
+}
+
+hr.anim__item._active {
+  transform: translate(0);
+}
+
+img.anim__item {
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+img.anim__item._active {
+  opacity: 1;
+  transition: 5s opacity, 5s visibility;
+  visibility: visible;
+}
+
+.train-info__block-text.anim__item {
+  transform: translateY(100%);
+  transition: 0.8s;
+}
+
+
+.train-info__block-text.anim__item._active {
+  transform: translateY(0);
+}
+
+.services__item.anim__item {
+  transition: all 0.8s ease 0s;
+  transform: translateY(100%);
+}
+
+.services__item.anim__item._active {
+  transform: translateY(0);
+}
+
 .about {
   &__body {
     margin-bottom: 130px;
@@ -717,9 +760,116 @@ a {
     // margin-right: 75px;
   }
 
-  &__images {
-  }
 }
+
+.div-img-1.anim__item {
+  position: relative;
+  transition: color 0.25s;
+}
+
+.div-img-1.anim__item::before,
+.div-img-1.anim__item::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  width: 0;
+  height: 0;
+  transform: translate(-20px, 20px);
+}
+
+.div-img-1.anim__item::before {
+  top: 0px;
+  left: 0;
+}
+.div-img-1.anim__item::after {
+  bottom: 0px;
+  right: 0;
+}
+.div-img-1.anim__item._active {
+  color: #E00808;
+}
+
+.div-img-1.anim__item._active::before,
+.div-img-1.anim__item._active::after {
+  width: 100%;
+  height: 100%;
+}
+.div-img-1.anim__item._active::before {
+  border-top-color: #E00808; // Make borders visible
+  border-right-color: #E00808;
+  transition: width 0.25s ease-out,
+    // Width expands first
+    height 0.5s ease-out 0.5s; // And then height
+}
+
+.div-img-1.anim__item._active::after {
+  border-bottom-color: #E00808; // Make borders visible
+  border-left-color: #E00808;
+  transition: border-color 0s ease-out 1s,
+    // Wait for ::before to finish before showing border
+    width 0.5s ease-out 1s,
+    // And then exanding width
+    height 0.5s ease-out 1.5s; // And finally height
+}
+
+.div-img-2.anim__item {
+  position: relative;
+  transition: color 0.25s;
+}
+
+.div-img-2.anim__item::before,
+.div-img-2.anim__item::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  width: 0;
+  height: 0;
+  transform: translate(20px, -20px);
+}
+
+.div-img-2.anim__item::before {
+  top: 0px;
+  left: 0;
+}
+.div-img-2.anim__item::after {
+  bottom: 0px;
+  right: 0;
+}
+.div-img-2.anim__item._active {
+  color: #D3D3D3;
+}
+
+.div-img-2.anim__item._active::before,
+.div-img-2.anim__item._active::after {
+  width: 100%;
+  height: 100%;
+}
+.div-img-2.anim__item._active::before {
+  border-top-color: #D3D3D3; // Make borders visible
+  border-right-color: #D3D3D3;
+  transition: 
+  border-color 0s ease-out 1s,
+  width 0.5s ease-out 1s,
+    // Width expands first
+    height 0.5s ease-out 1.5s; // And then height
+}
+
+.div-img-2.anim__item._active::after {
+  border-bottom-color: #D3D3D3; // Make borders visible
+  border-left-color: #D3D3D3;
+  transition: 
+    // Wait for ::before to finish before showing border
+    width 0.5s ease-out,
+    // And then exanding width
+    height 0.5s ease-out 0.5s; // And finally height
+}
+
 
 .btn {
   position: absolute;
@@ -745,6 +895,10 @@ a {
 }
 .slider-about .slick-dots li {
   padding: 0 13px;
+}
+
+.slider-about .slick-list {
+  padding-top: 30px;
 }
 
 .slider-about .slick-dots button {
@@ -1032,7 +1186,7 @@ a {
 
 .our-proj {
   background: url(../img/bg-proj.svg) center center / cover no-repeat;
-
+  padding-top: 100px;
   &__body {
     max-width: 1230px;
     padding: 0 15px;
@@ -1090,7 +1244,7 @@ a {
 
 // ============ training ===============
 .training {
-  padding-top: 30px;
+  padding-top: 100px;
   width: 100%;
   height: 100%;
   &__body {
@@ -1159,6 +1313,7 @@ a {
     max-width: 100%;
     width: 100%;
     object-fit: cover;
+    transition: all 1s ease 0s;
   }
 }
 
@@ -1351,7 +1506,7 @@ a {
   }
   .slider-laptop {
     width: 100%;
-}
+  }
 
   .slider-laptop__item {
     margin: 0 20px;
@@ -1761,6 +1916,7 @@ a {
   width: 100%;
   height: 100%;
   margin: 40px 0;
+  padding-top: 100px;
   &__body {
     max-width: 1230px;
     padding: 0 15px;
