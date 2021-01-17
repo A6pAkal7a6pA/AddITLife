@@ -178,7 +178,7 @@ if (animItems.length > 0) {
       scrollTop = window.pageXOffset || document.documentElement.scrollTop;
     return {
       top: rect.top + scrollTop, left: rect.left + scrollLeft
-      
+
     }
   }
 }
@@ -197,35 +197,36 @@ $(document).ready(function () {
 
 
 
-  let images = $('.slick-active');
-  let sliderItem1 = $('.slider-about__item-1');
-  let sliderItem2 = $('.slider-about__item-2');
-  let sliderItem3 = $('.slider-about__item-3');
-  let sliderItem4 = $('.slider-about__item-4');
-  if(sliderItem1.hasClass('slick-active')) {
-    sliderItem1.children('.slider-about__images').addClass('pider');
-    sliderItem2.children('.slider-about__images').removeClass('pider');
-    sliderItem3.children('.slider-about__images').removeClass('pider');
-    sliderItem4.children('.slider-about__images').removeClass('pider');
+var block_show = null;
+
+function scrollTracking() {
+  var wt = $(window).scrollTop();
+  var wh = $(window).height();
+  var et = $('.training__image').offset().top;
+  var eh = $('.training__image').outerHeight();
+
+  if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
+    if (block_show == null || block_show == false) {
+      $('.training__image').addClass('_active');
+      $('.training__image .div-img-2').addClass('_active');
+    }
+    block_show = true;
+  } else {
+    if (block_show == null || block_show == true) {
+      $('.training__image').removeClass('_active');
+      $('.training__image .div-img-2').removeClass('_active');
+    }
+    block_show = false;
   }
-  if(sliderItem2.hasClass('slick-active')) {
-    sliderItem2.children('.slider-about__images').addClass('pider');
-    sliderItem1.children('.slider-about__images').removeClass('pider');
-    sliderItem3.children('.slider-about__images').removeClass('pider');
-    sliderItem4.children('.slider-about__images').removeClass('pider');
-  }
-  if(sliderItem3.hasClass('slick-active')) {
-    sliderItem3.children('.slider-about__images').addClass('pider');
-    sliderItem2.children('.slider-about__images').removeClass('pider');
-    sliderItem1.children('.slider-about__images').removeClass('pider');
-    sliderItem4.children('.slider-about__images').removeClass('pider');
-  }
-  if(sliderItem4.hasClass('slick-active')) {
-    sliderItem4.children('.slider-about__images').addClass('pider');
-    sliderItem1.children('.slider-about__images').removeClass('pider');
-    sliderItem3.children('.slider-about__images').removeClass('pider');
-    sliderItem2.children('.slider-about__images').removeClass('pider');
-  }
+}
+
+$(window).scroll(function () {
+  scrollTracking();
+});
+
+$(document).ready(function () {
+  scrollTracking();
+});
 // sliderItem.children('.slider-about__images').addClass('pider');
 
 
