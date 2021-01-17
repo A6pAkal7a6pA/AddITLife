@@ -2358,3 +2358,14 @@ img.anim__item._active {
     margin: 0;
   }
 }
+
+@media (max-width: 467px) {
+  .div-img-1::after,
+  .div-img-1::before {
+    display: none;
+  }
+  .div-img-2::after,
+  .div-img-2::before {
+    display: none;
+  }
+}
