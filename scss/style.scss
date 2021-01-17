@@ -934,7 +934,7 @@ img.anim__item._active {
     padding: 0 10px;
   }
   .slider-about .slick-dots li {
-    display: none;
+    display: block;
   }
 }
 
@@ -1546,9 +1546,6 @@ img.anim__item._active {
     left: 0;
     transform: translate(0, -50%);
     
-  }
-  .slider-laptop__dots {
-    display: none;
   }
 }
 
