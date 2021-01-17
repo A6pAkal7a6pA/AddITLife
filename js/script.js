@@ -197,36 +197,68 @@ $(document).ready(function () {
 
 
 
-var block_show = null;
+// var block_show = null;
 
-function scrollTracking() {
-  var wt = $(window).scrollTop();
-  var wh = $(window).height();
-  var et = $('.training__image').offset().top;
-  var eh = $('.training__image').outerHeight();
+// function scrollTracking() {
+//   var wt = $(window).scrollTop();
+//   var wh = $(window).height();
+//   var et = $('.training__image').offset().top;
+//   var eh = $('.training__image').outerHeight();
 
-  if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
-    if (block_show == null || block_show == false) {
-      $('.training__image').addClass('_active');
-      $('.training__image .div-img-2').addClass('_active');
-    }
-    block_show = true;
-  } else {
-    if (block_show == null || block_show == true) {
-      $('.training__image').removeClass('_active');
-      $('.training__image .div-img-2').removeClass('_active');
-    }
-    block_show = false;
-  }
-}
+//   if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
+//     if (block_show == null || block_show == false) {
+//       $('.training__image').addClass('_active');
+//       $('.training__image .div-img-2').addClass('_active');
+//     }
+//     block_show = true;
+//   } else {
+//     if (block_show == null || block_show == true) {
+//       $('.training__image').removeClass('_active');
+//       $('.training__image .div-img-2').removeClass('_active');
+//     }
+//     block_show = false;
+//   }
+// }
 
-$(window).scroll(function () {
-  scrollTracking();
-});
+// $(window).scroll(function () {
+//   scrollTracking();
+// });
 
-$(document).ready(function () {
-  scrollTracking();
-});
+// $(document).ready(function () {
+//   scrollTracking();
+// });
+
+
+
+
+// function scrollTracking1() {
+//   var wt = $(window).scrollTop();
+//   var wh = $(window).height();
+//   var et = $('.slick-active .slider-about__text').offset().top;
+//   var eh = $('.slick-active .slider-about__text').outerHeight();
+
+//   if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
+//     if (block_show == null || block_show == false) {
+//       $('.slider-about__images').addClass('_active');
+//       $('.slider-about__images .div-img-2').addClass('_active');
+//     }
+//     block_show = true;
+//   } else {
+//     if (block_show == null || block_show == true) {
+//       $('.slider-about__images').removeClass('_active');
+//       $('.slider-about__images .div-img-2').removeClass('_active');
+//     }
+//     block_show = false;
+//   }
+// }
+
+// $(window).scroll(function () {
+//   scrollTracking1();
+// });
+
+// $(document).ready(function () {
+//   scrollTracking1();
+// });
 // sliderItem.children('.slider-about__images').addClass('pider');
 
 

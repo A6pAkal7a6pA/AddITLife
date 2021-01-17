@@ -112,7 +112,7 @@
           </div>
           <div class="training__image div-img-1 anim__item">
             <div class="div-img-2 anim__item">
-            <img src="img/training-img.png" alt="">
+              <img src="img/training-img.png" alt="">
             </div>
           </div>
         </div>
@@ -176,30 +176,7 @@
           <div class="train-info__item">
             <div class="train-info__image div-img-1 anim__item">
               <div class="div-img-2 anim__item">
-              <img class="anim__item" src="img/train-info-img-1.png" alt="">
-            </div>
-            </div>
-            <div class="train-info__block-text anim__item">
-              <div class="train-info__title">
-                <span class="train-info__date">
-                  11 january 2021
-                </span>
-                BUSINESS BENEFITS GAINED:
-              </div>
-              <div class="train-info__text">
-                The project purpose was to replace existing systems automating key business processes for trade and
-                technical centers, including gross and retail sales of cars, spare parts and accessories, warehousing
-                Inventories and the car's service maintenance with a solution that, as a minimum, replaces existing
-                functionality. The old IT solutions did not meet the modern business requirements of the company,
-                represented uncoordinated tech platforms requiring costly maintenance and support.
-              </div>
-            </div>
-          </div>
-
-          <div class="train-info__item">
-            <div class="train-info__image div-img-1 anim__item">
-              <div class="div-img-2 anim__item">
-              <img class="anim__item" src="img/train-info-img-2.png" alt="">
+                <img class="anim__item" src="img/train-info-img-1.png" alt="">
               </div>
             </div>
             <div class="train-info__block-text anim__item">
@@ -222,7 +199,30 @@
           <div class="train-info__item">
             <div class="train-info__image div-img-1 anim__item">
               <div class="div-img-2 anim__item">
-              <img class="anim__item" src="img/train-info-img-3.png" alt="">
+                <img class="anim__item" src="img/train-info-img-2.png" alt="">
+              </div>
+            </div>
+            <div class="train-info__block-text anim__item">
+              <div class="train-info__title">
+                <span class="train-info__date">
+                  11 january 2021
+                </span>
+                BUSINESS BENEFITS GAINED:
+              </div>
+              <div class="train-info__text">
+                The project purpose was to replace existing systems automating key business processes for trade and
+                technical centers, including gross and retail sales of cars, spare parts and accessories, warehousing
+                Inventories and the car's service maintenance with a solution that, as a minimum, replaces existing
+                functionality. The old IT solutions did not meet the modern business requirements of the company,
+                represented uncoordinated tech platforms requiring costly maintenance and support.
+              </div>
+            </div>
+          </div>
+
+          <div class="train-info__item">
+            <div class="train-info__image div-img-1 anim__item">
+              <div class="div-img-2 anim__item">
+                <img class="anim__item" src="img/train-info-img-3.png" alt="">
               </div>
             </div>
             <div class="train-info__block-text anim__item">
@@ -467,6 +467,38 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script>
+    var block_show = null;
+
+    function scrollTracking() {
+      var wt = $(window).scrollTop();
+      var wh = $(window).height();
+      var et = $('.training__image').offset().top;
+      var eh = $('.training__image').outerHeight();
+
+      if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
+        if (block_show == null || block_show == false) {
+          $('.training__image').addClass('_active');
+          $('.training__image .div-img-2').addClass('_active');
+        }
+        block_show = true;
+      } else {
+        if (block_show == null || block_show == true) {
+          $('.training__image').removeClass('_active');
+          $('.training__image .div-img-2').removeClass('_active');
+        }
+        block_show = false;
+      }
+    }
+
+    $(window).scroll(function () {
+      scrollTracking();
+    });
+
+    $(document).ready(function () {
+      scrollTracking();
+    });
+  </script>
   <script src="js/script.js"></script>
 </body>
 
