@@ -150,8 +150,12 @@ $(".slider-laptop").on('afterChange', function (event, slick, currentSlide) {
 });
 
 const animItems = document.querySelectorAll('.anim__item');
+const divItems = document.querySelector('.div-img-1');
+const divItems2 = document.querySelector('.div-img-2');
+const slickAct = document.querySelectorAll('.slick-active');
 if (animItems.length > 0) {
   window.addEventListener('scroll', animOnScroll);
+  
 
   function animOnScroll(e) {
     for (let i = 0; i < animItems.length; i++) {
@@ -164,7 +168,8 @@ if (animItems.length > 0) {
       if (animItemsHeight > window.innerHeight) {
         animItemPoint = window.innerHeight - animItemsHeight / animStart
       }
-      if ((pageYOffset > animItemsOffset - animItemPoint) && pageYOffset < (animItemsOffset + animItemsHeight)) {
+      // if ((pageYOffset > animItemsOffset - animItemPoint) && pageYOffset < (animItemsOffset + animItemsHeight)) {
+      if ((pageYOffset > animItemsOffset - animItemPoint) && (pageYOffset < animItemsOffset + animItemsHeight)) {
         animItem.classList.add('_active');
       } else {
         animItem.classList.remove('_active');
@@ -177,7 +182,8 @@ if (animItems.length > 0) {
       scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
       scrollTop = window.pageXOffset || document.documentElement.scrollTop;
     return {
-      top: rect.top + scrollTop, left: rect.left + scrollLeft
+      top: rect.top + scrollTop,
+      left: rect.left + scrollLeft
 
     }
   }
