@@ -196,3 +196,41 @@ $(document).ready(function () {
 });
 
 
+
+  let images = $('.slick-active');
+  let sliderItem1 = $('.slider-about__item-1');
+  let sliderItem2 = $('.slider-about__item-2');
+  let sliderItem3 = $('.slider-about__item-3');
+  let sliderItem4 = $('.slider-about__item-4');
+  if(sliderItem1.hasClass('slick-active')) {
+    sliderItem1.children('.slider-about__images').addClass('pider');
+    sliderItem2.children('.slider-about__images').removeClass('pider');
+    sliderItem3.children('.slider-about__images').removeClass('pider');
+    sliderItem4.children('.slider-about__images').removeClass('pider');
+  }
+  if(sliderItem2.hasClass('slick-active')) {
+    sliderItem2.children('.slider-about__images').addClass('pider');
+    sliderItem1.children('.slider-about__images').removeClass('pider');
+    sliderItem3.children('.slider-about__images').removeClass('pider');
+    sliderItem4.children('.slider-about__images').removeClass('pider');
+  }
+  if(sliderItem3.hasClass('slick-active')) {
+    sliderItem3.children('.slider-about__images').addClass('pider');
+    sliderItem2.children('.slider-about__images').removeClass('pider');
+    sliderItem1.children('.slider-about__images').removeClass('pider');
+    sliderItem4.children('.slider-about__images').removeClass('pider');
+  }
+  if(sliderItem4.hasClass('slick-active')) {
+    sliderItem4.children('.slider-about__images').addClass('pider');
+    sliderItem1.children('.slider-about__images').removeClass('pider');
+    sliderItem3.children('.slider-about__images').removeClass('pider');
+    sliderItem2.children('.slider-about__images').removeClass('pider');
+  }
+// sliderItem.children('.slider-about__images').addClass('pider');
+
+
+
+
+
+
+

@@ -692,7 +692,7 @@ img.anim__item {
   opacity: 0;
   visibility: hidden;
 }
-.slick-active img.anim__item._active {
+img.anim__item._active {
   opacity: 1;
   transition: 5s opacity, 5s visibility;
   visibility: visible;

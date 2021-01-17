@@ -758,7 +758,7 @@ img.anim__item {
   visibility: hidden;
 }
 
-.slick-active img.anim__item._active {
+img.anim__item._active {
   opacity: 1;
   -webkit-transition: 5s opacity, 5s visibility;
   transition: 5s opacity, 5s visibility;
